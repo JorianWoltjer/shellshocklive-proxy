@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import http.server
 import http.client
 from socket import SocketIO
@@ -7,7 +8,7 @@ from mods import join_any_game, rickroll, count
 HOST, PORT = "0.0.0.0", 80
 MODS = [join_any_game]
 
-REAL_IP = "96.127.165.218"  # api.playerio.com
+REAL_IP = "96.127.165.218"  # nslookup api.playerio.com 8.8.8.8
 
 
 class Proxy(http.server.BaseHTTPRequestHandler):
