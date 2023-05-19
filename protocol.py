@@ -109,10 +109,8 @@ def decode_all(f):
     assert f.read(1) == END
 
     games = []
-
     while peek(f):
         game = Game.decode(f)
-
         games.append(game)
 
     return games

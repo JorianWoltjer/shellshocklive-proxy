@@ -12,10 +12,6 @@ REAL_IP = "96.127.165.218"  # nslookup api.playerio.com 8.8.8.8
 
 
 class Proxy(http.server.BaseHTTPRequestHandler):
-    class _FakeSocket(SocketIO):
-        def makefile(self, *args, **kw):
-            return self
-
     def do_GET(self):
         print(f"GET request received for {self.path} to {self.headers['Host']}:")
 
