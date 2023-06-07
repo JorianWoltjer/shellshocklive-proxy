@@ -18,3 +18,9 @@ Starting proxy server on 0.0.0.0:80
 ```
 
 Done! Now when you start ShellShock Live on the victim it should forward all the traffic through your proxy, and any mods should be applied. 
+
+### Set `CURRENT_LEVEL`
+
+In order to determine if you should be allowed to join a given match or not, the game checks if your current level is not further away from the "max level difference". To find which matches you were normally not able to join, but now are able to with the mod you will need to set this `CURRENT_LEVEL` variable in the `join_any_game.py` mod. This way all matches that are bypassed will be correctly suffixed with `[LEVEL]`.
+
+https://github.com/JorianWoltjer/shellshocklive-proxy/blob/75b17679f35f50d2b5c4a2e7c1a34fb1611659dd/mods/join_any_game.py#L11
